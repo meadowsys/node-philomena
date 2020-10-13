@@ -63,3 +63,32 @@ jobs:
 
       - name: lint typescript
         run: pnpm run lint
+
+  test:
+    name: test
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v1.2.0
+        with:
+          version: 5.8.0
+
+      - name: print node version
+        run: |
+          node -v
+          npm -v
+          pnpm -v
+
+      - name: install dependencies
+        run: pnpm i
+
+      - name: test typescript
+        run: pnpm test
