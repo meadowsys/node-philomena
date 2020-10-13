@@ -24,7 +24,7 @@ module.exports = {
          jsx: false
       },
       tsconfigRootDir: __dirname,
-      project: "./tsconfig.json"
+      project: "./tsconfig.eslint.json"
    },
    extends: "plugin:@typescript-eslint/recommended",
    env: {
@@ -395,9 +395,9 @@ module.exports = {
       "@typescript-eslint/no-unnecessary-type-arguments": off,
       "@typescript-eslint/no-unnecessary-type-assertion": error,
       "@typescript-eslint/no-unsafe-assignment": error,
-      "@typescript-eslint/no-unsafe-call": error,
-      "@typescript-eslint/no-unsafe-member-access": error,
-      "@typescript-eslint/no-unsafe-return": error,
+      "@typescript-eslint/no-unsafe-call": off,
+      "@typescript-eslint/no-unsafe-member-access": off,
+      "@typescript-eslint/no-unsafe-return": off,
       "@typescript-eslint/no-unused-expressions": error,
       "@typescript-eslint/no-unused-vars-experimental": [warn, {
          ignoreArgsIfArgsAfterAreUsed: true,

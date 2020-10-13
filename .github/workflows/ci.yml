@@ -8,6 +8,9 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: ["10", "12", "14"]
     steps:
       - name: checkout code
         uses: actions/checkout@v2
@@ -15,18 +18,12 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: "14"
+          node-version: ${{ matrix.node-version }}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v1.2.0
         with:
-          version: 5.8.0
-
-      - name: print node version
-        run: |
-          node -v
-          npm -v
-          pnpm -v
+          version: 5.9.0
 
       - name: install dependencies
         run: pnpm i
@@ -38,6 +35,9 @@ jobs:
   lint:
     name: lint
     runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: ["10", "12", "14"]
     steps:
       - name: checkout code
         uses: actions/checkout@v2
@@ -45,18 +45,12 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: "14"
+          node-version: ${{ matrix.node-version }}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v1.2.0
         with:
-          version: 5.8.0
-
-      - name: print node version
-        run: |
-          node -v
-          npm -v
-          pnpm -v
+          version: 5.9.0
 
       - name: install dependencies
         run: pnpm i
@@ -64,9 +58,13 @@ jobs:
       - name: lint typescript
         run: pnpm run lint
 
+
   test:
     name: test
     runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: ["10", "12", "14"]
     steps:
       - name: checkout code
         uses: actions/checkout@v2
@@ -74,18 +72,12 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: "14"
+          node-version: ${{ matrix.node-version }}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v1.2.0
         with:
-          version: 5.8.0
-
-      - name: print node version
-        run: |
-          node -v
-          npm -v
-          pnpm -v
+          version: 5.9.0
 
       - name: install dependencies
         run: pnpm i
