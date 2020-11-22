@@ -34,7 +34,7 @@ jobs:
     - name: test
       run: |
         pnpm test
-        bash <(curl -s https://codecov.io/bash) -f testresults.xml
+        bash <(curl -s https://codecov.io/bash) -f testresults.json
 
   docs:
     name: lint/docs

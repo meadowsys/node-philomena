@@ -2,5 +2,5 @@ node_modules
 build
 docs
 .vscode
-testresults.xml
+testresults.json
 GIT-IGNORE-*

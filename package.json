@@ -8,7 +8,7 @@
       "build/**/*"
    ],
    "scripts": {
-      "test": "mocha -R xunit -reporter-option output=testresults.xml -r ts-node/register test/**/*.ts",
+      "test": "mocha -R json -r ts-node/register test/**/*.ts >> testresults.json",
       "build": "tsc",
       "lint": "eslint --ext .ts src/",
       "docs": "node renderdocs",
