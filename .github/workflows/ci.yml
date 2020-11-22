@@ -12,9 +12,6 @@ jobs:
       matrix:
         node-version: ["10", "12", "14", "15"]
     steps:
-    - name: get ref name
-      run: echo FOLDERNAME=${GITHUB_REF#refs/*/} >> $GITHUB_ENV
-
     - name: checkout code
       uses: actions/checkout@v2
 
@@ -31,10 +28,6 @@ jobs:
     - name: install dependencies
       run: pnpm i
 
-      # hm linting 3 times
-    - name: lint
-      run: pnpm run lint
-
     - name: build
       run: pnpm run build
 
@@ -42,6 +35,32 @@ jobs:
       run: |
         pnpm test
         bash <(curl -s https://codecov.io/bash) -f testresults.xml
+
+  docs:
+    name: lint/docs
+    runs-on: ubuntu-20.04
+    steps:
+    - name: get ref name
+      run: echo FOLDERNAME=${GITHUB_REF#refs/*/} >> $GITHUB_ENV
+
+    - name: checkout code
+      uses: actions/checkout@v2
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "15"
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v1.2.1
+      with:
+        version: 5.13.1
+
+    - name: install dependencies
+      run: pnpm i
+
+    - name: lint
+      run: pnpm run lint
 
     - name: render docs
       run: npm run docs
