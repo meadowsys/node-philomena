@@ -1,23 +1,27 @@
 {
    "compilerOptions": {
       "outDir": "build",
-      "removeComments": true,
+      // "removeComments": true,
       "lib": ["esnext"],
       "esModuleInterop": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
       "module": "commonjs",
       "moduleResolution": "node",
       "noImplicitAny": true,
       "noImplicitThis": true,
       "rootDir": "src",
+      "sourceMap": true,
       "strict": true,
       "strictBindCallApply": true,
       "strictFunctionTypes": true,
       "strictNullChecks": true,
       "strictPropertyInitialization": true,
-      "target": "ES2020",
+      "target": "ES2017",
       "declaration": true
    },
    "include": ["src/**/*"],
+   "exclude": ["node_modules"],
    "typeAcquisition": {
       "enable": true
    }

@@ -6,12 +6,12 @@
 const off = "off";
 const warn = "warn";
 const error = "error";
+
+const always = "always";
 const never = "never";
-const noodle = "^[a-z0-9]{1,}$";
-const noodleorupper = "^([0-9a-z]{1,}|[0-9A-Z]{1,})$";
-const T = "^[A-Z]$";
-const ignoreunused = "^_";
 const all = "all";
+
+const ignoreunused = "^_";
 
 module.exports = {
    parser: "@typescript-eslint/parser",
@@ -63,6 +63,7 @@ module.exports = {
 
       // regular eslint rules
       "no-trailing-spaces": [error],
+      "spaced-comment": [error, always],
 
       // typescript-eslint rules
       "@typescript-eslint/adjacent-overload-signatures": error,
@@ -189,7 +190,7 @@ module.exports = {
          // ignoredNodes: [],
          ignoreComments: false
       }],
-      "@typescript-eslint/init-declarations": ["error", "always"],
+      "@typescript-eslint/init-declarations": ["error", always],
       "@typescript-eslint/keyword-spacing": ["error", {
          before: true,
          after: true
@@ -201,145 +202,12 @@ module.exports = {
             requireLast: true
          },
          singleline: {
-            delimiter: "semi",
-            requireLast: true
+            delimiter: "comma",
+            requireLast: false
          }
       }],
       "@typescript-eslint/member-ordering": off,
       "@typescript-eslint/method-signature-style": [error, "method"],
-      "@typescript-eslint/naming-convention": [error, {
-         // for vars and lets
-         // noodle
-         format: null,
-         custom: {
-            regex: noodle,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["variable"]
-      }, {
-         // const
-         // noodle or upper
-         format: null,
-         custom: {
-            regex: noodleorupper,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["variable"],
-         modifiers: ["const"]
-      }, {
-         // function
-         // noodle
-         format: null,
-         custom: {
-            regex: noodle,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["function"]
-      }, {
-         // parameters
-         // noodle
-         format: null,
-         custom: {
-            regex: noodle,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["parameter"]
-      }, {
-         // properties
-         // noodle
-         format: null,
-         custom: {
-            regex: noodle,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["property"]
-      }, {
-         // readonly properties
-         // noodle
-         format: null,
-         custom: {
-            regex: noodleorupper,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["property"],
-         modifiers: ["readonly"]
-      }
-      // parameter properties go here but idk what that is
-      , {
-         // method
-         // noodle
-         format: null,
-         custom: {
-            regex: noodle,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["method"]
-      }, {
-         // accessor
-         // noodle
-         format: null,
-         custom: {
-            regex: noodle,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["accessor"]
-      }, {
-         // readonly accessor
-         // noodle
-         format: null,
-         custom: {
-            regex: noodle,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["accessor"],
-         modifiers: ["readonly"]
-      }, {
-         // enummember
-         // noodle
-         format: null,
-         custom: {
-            regex: noodleorupper,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["enumMember"]
-      }, {
-         // class, interface, typealias, enum
-         // noodle
-         format: ["PascalCase"],
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["class", "interface", "typeAlias", "enum"]
-      }, {
-         // typeparameter
-         format: null,
-         custom: {
-            regex: T,
-            match: true
-         },
-         leadingUnderscore: "forbid",
-         trailingUnderscore: "forbid",
-         selector: ["typeParameter"]
-      }],
       "@typescript-eslint/no-array-constructor": error,
       "@typescript-eslint/no-base-to-string": warn,
       "@typescript-eslint/no-confusing-non-null-assertion": error,
@@ -349,7 +217,7 @@ module.exports = {
       "@typescript-eslint/no-empty-interface": error,
       "@typescript-eslint/no-explicit-any": off,
       "@typescript-eslint/no-extra-non-null-assertion": error,
-      "@typescript-eslint/no-extra-parens": [error, all],
+      "@typescript-eslint/no-extra-parens": [off, all],
       "@typescript-eslint/no-extra-semi": off,
       "@typescript-eslint/no-extraneous-class": error,
       "@typescript-eslint/no-floating-promises": error,
@@ -376,7 +244,7 @@ module.exports = {
          ignoreReadonlyClassProperties: true
       }],
       "@typescript-eslint/no-misused-new": error,
-      "@typescript-eslint/no-misused-promises": error,
+      "@typescript-eslint/no-misused-promises": off,
       "@typescript-eslint/no-namespace": error,
       "@typescript-eslint/no-non-null-asserted-optional-chain": error,
       "@typescript-eslint/no-non-null-assertion": error,
@@ -388,16 +256,20 @@ module.exports = {
       "@typescript-eslint/no-shadow": warn,
       "@typescript-eslint/no-this-alias": error,
       "@typescript-eslint/no-throw-literal": error,
-      "@typescript-eslint/no-type-alias": error,
+      "@typescript-eslint/no-type-alias": [error, {
+         allowAliases: "in-unions-and-intersections"
+      }],
       "@typescript-eslint/no-unnecessary-boolean-literal-compare": error,
-      "@typescript-eslint/no-unnecessary-condition": error,
+      "@typescript-eslint/no-unnecessary-condition": [error, {
+         allowConstantLoopConditions: true
+      }],
       "@typescript-eslint/no-unnecessary-qualifier": error,
       "@typescript-eslint/no-unnecessary-type-arguments": off,
       "@typescript-eslint/no-unnecessary-type-assertion": error,
       "@typescript-eslint/no-unsafe-assignment": error,
-      "@typescript-eslint/no-unsafe-call": off,
-      "@typescript-eslint/no-unsafe-member-access": off,
-      "@typescript-eslint/no-unsafe-return": off,
+      "@typescript-eslint/no-unsafe-call": error,
+      "@typescript-eslint/no-unsafe-member-access": error,
+      "@typescript-eslint/no-unsafe-return": error,
       "@typescript-eslint/no-unused-expressions": error,
       "@typescript-eslint/no-unused-vars-experimental": [warn, {
          ignoreArgsIfArgsAfterAreUsed: true,
@@ -429,21 +301,21 @@ module.exports = {
       "@typescript-eslint/prefer-regexp-exec": error,
       "@typescript-eslint/prefer-string-starts-ends-with": error,
       "@typescript-eslint/prefer-ts-expect-error": error,
-      "@typescript-eslint/promise-function-async": error,
+      "@typescript-eslint/promise-function-async": off,
       "@typescript-eslint/quotes": [error, "double", {
          avoidEscape: false,
-         allowTemplateLiterals: true
+         allowTemplateLiterals: false
       }],
       "@typescript-eslint/require-array-sort-compare": warn,
-      "@typescript-eslint/require-await": warn,
+      "@typescript-eslint/require-await": off,
       "@typescript-eslint/restrict-plus-operands": [warn, {
          checkCompoundAssignments: true
       }],
-      "@typescript-eslint/restrict-template-expressions": warn,
+      "@typescript-eslint/restrict-template-expressions": off,
       "@typescript-eslint/return-await": off,
       "@typescript-eslint/semi": error,
       "@typescript-eslint/space-before-function-paren": [error, never],
-      "@typescript-eslint/strict-boolean-expressions": error,
+      "@typescript-eslint/strict-boolean-expressions": off,
       "@typescript-eslint/switch-exhaustiveness-check": error,
       "@typescript-eslint/triple-slash-reference": [error, {
          path: never,
@@ -460,7 +332,7 @@ module.exports = {
             }
          }
       }],
-      "@typescript-eslint/typedef": [error, {
+      "@typescript-eslint/typedef": [off, {
          arrayDestructing: true,
          arrowParameter: false,
          memberVariableDeclaration: true,
