@@ -27,8 +27,8 @@ const opts = {
    excludePrivate: true,
    ignoreCompilerErrors: true,
    includeVersion: isreleasebuild,
-   listInvalidSymbolLinks: true
-
+   listInvalidSymbolLinks: true,
+   stripInternal: true
    // ,readme: "none"
 };
 
