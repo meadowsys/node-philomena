@@ -66,6 +66,18 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Image from the response</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://derpibooru.org/pages/api#image-response">https://derpibooru.org/pages/api#image-response</a></p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -90,7 +102,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#downvotes" class="tsd-kind-icon">downvotes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#duplicateof" class="tsd-kind-icon">duplicate<wbr>Of</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#duration" class="tsd-kind-icon">duration</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#faves" class="tsd-kind-icon">faves</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#favourites" class="tsd-kind-icon">favourites</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#firstseenat" class="tsd-kind-icon">first<wbr>Seen<wbr>At</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#format" class="tsd-kind-icon">format</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#height" class="tsd-kind-icon">height</a></li>
@@ -120,6 +132,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="image.html#wilsonscore" class="tsd-kind-icon">wilson<wbr>Score</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="image.html#favorites" class="tsd-kind-icon">favorites</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -131,9 +149,14 @@
 					<div class="tsd-signature tsd-kind-icon">animated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L4">struct/image.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L8">struct/image.ts:8</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>whether or notthe image is animated</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="aspectratio" class="tsd-anchor"></a>
@@ -141,9 +164,14 @@
 					<div class="tsd-signature tsd-kind-icon">aspect<wbr>Ratio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L5">struct/image.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L11">struct/image.ts:11</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the image&#39;s width divided by height</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="commentcount" class="tsd-anchor"></a>
@@ -151,9 +179,14 @@
 					<div class="tsd-signature tsd-kind-icon">comment<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L6">struct/image.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L14">struct/image.ts:14</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>number of comments madeon this imagee</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="createdat" class="tsd-anchor"></a>
@@ -161,9 +194,14 @@
 					<div class="tsd-signature tsd-kind-icon">created<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L7">struct/image.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L17">struct/image.ts:17</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>creation time (in UTC) of this image (RFC3339 datetime)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="deletionreason" class="tsd-anchor"></a>
@@ -171,9 +209,15 @@
 					<div class="tsd-signature tsd-kind-icon">deletion<wbr>Reason<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L8">struct/image.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L24">struct/image.ts:24</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>on images that were hidden, the reason this image was hidden, or null if not provided</p>
+						</div>
+						<p>If the image wasn&#39;t deleted, this is null</p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="description" class="tsd-anchor"></a>
@@ -181,9 +225,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L9">struct/image.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L27">struct/image.ts:27</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>description of this image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="downvotes" class="tsd-anchor"></a>
@@ -191,19 +240,29 @@
 					<div class="tsd-signature tsd-kind-icon">downvotes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L10">struct/image.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L30">struct/image.ts:30</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>number of downvotes this image has</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="duplicateof" class="tsd-anchor"></a>
 					<h3>duplicate<wbr>Of</h3>
-					<div class="tsd-signature tsd-kind-icon">duplicate<wbr>Of<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
+					<div class="tsd-signature tsd-kind-icon">duplicate<wbr>Of<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L11">struct/image.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L33">struct/image.ts:33</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the ID of the merge target image, or null if not merged with another image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="duration" class="tsd-anchor"></a>
@@ -211,19 +270,34 @@
 					<div class="tsd-signature tsd-kind-icon">duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L12">struct/image.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L39">struct/image.ts:39</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the number of seconds this image lasts (if animated) or 0.04</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://derpibooru.org/pages/api#image-response">https://derpibooru.org/pages/api#image-response</a>, (I didn&#39;t come up with 0.04)</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
-					<a name="faves" class="tsd-anchor"></a>
-					<h3>faves</h3>
-					<div class="tsd-signature tsd-kind-icon">faves<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
+					<a name="favourites" class="tsd-anchor"></a>
+					<h3>favourites</h3>
+					<div class="tsd-signature tsd-kind-icon">favourites<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L13">struct/image.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L42">struct/image.ts:42</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>number of favourites this image has</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="firstseenat" class="tsd-anchor"></a>
@@ -231,9 +305,14 @@
 					<div class="tsd-signature tsd-kind-icon">first<wbr>Seen<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L14">struct/image.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L47">struct/image.ts:47</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>time (in UTC) this image was first seen at (RFC3339 datetime)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="format" class="tsd-anchor"></a>
@@ -241,9 +320,14 @@
 					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L15">struct/image.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L50">struct/image.ts:50</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>format of this image (one of &quot;gif&quot;, &quot;jpg&quot;, &quot;jpeg&quot;, &quot;png&quot;, &quot;svg&quot;, &quot;webm&quot;)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="height" class="tsd-anchor"></a>
@@ -251,9 +335,14 @@
 					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L16">struct/image.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L53">struct/image.ts:53</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the image&#39;s height (in pixels)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="hiddenfromusers" class="tsd-anchor"></a>
@@ -261,9 +350,14 @@
 					<div class="tsd-signature tsd-kind-icon">hidden<wbr>From<wbr>Users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L17">struct/image.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L56">struct/image.ts:56</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>whether or not the image is hidden (an image is hidden if merged or deleted for rule violation)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="id" class="tsd-anchor"></a>
@@ -271,9 +365,14 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L18">struct/image.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L59">struct/image.ts:59</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the image&#39;s ID</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="intensities" class="tsd-anchor"></a>
@@ -281,9 +380,15 @@
 					<div class="tsd-signature tsd-kind-icon">intensities<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L19">struct/image.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L65">struct/image.ts:65</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><a href="https://github.com/derpibooru/cli_intensities">internal image intensity data</a> used
+							for deduplication purposes, may be null if not generated yet</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="mimetype" class="tsd-anchor"></a>
@@ -291,9 +396,14 @@
 					<div class="tsd-signature tsd-kind-icon">mime<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L20">struct/image.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L68">struct/image.ts:68</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>MIME type of the image (one of &quot;image/gif&quot;, &quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/svg+xml&quot;, &quot;video/webm&quot;)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="name" class="tsd-anchor"></a>
@@ -301,9 +411,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L21">struct/image.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L71">struct/image.ts:71</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>filename of the uploaded image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="origshs512hash" class="tsd-anchor"></a>
@@ -311,9 +426,14 @@
 					<div class="tsd-signature tsd-kind-icon">origSHS512<wbr>Hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L22">struct/image.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L74">struct/image.ts:74</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>SHA512 hash of the image when it was originally uploaded</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="processed" class="tsd-anchor"></a>
@@ -321,9 +441,14 @@
 					<div class="tsd-signature tsd-kind-icon">processed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L23">struct/image.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L77">struct/image.ts:77</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>whether or not the image has finished optimization</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="representations" class="tsd-anchor"></a>
@@ -331,9 +456,15 @@
 					<div class="tsd-signature tsd-kind-icon">representations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L24">struct/image.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L83">struct/image.ts:83</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>a mapping of representation names to their respective URLs,
+							(&quot;full&quot;, &quot;large&quot;, &quot;medium&quot;, &quot;small&quot;, &quot;tall&quot;, &quot;thumb&quot;, &quot;thumb_small&quot;, &quot;thumb_tiny&quot;)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="score" class="tsd-anchor"></a>
@@ -341,9 +472,14 @@
 					<div class="tsd-signature tsd-kind-icon">score<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L25">struct/image.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L86">struct/image.ts:86</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>number of upvotes minus number of downvotes</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="sha512hash" class="tsd-anchor"></a>
@@ -351,9 +487,14 @@
 					<div class="tsd-signature tsd-kind-icon">sha512<wbr>Hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L26">struct/image.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L89">struct/image.ts:89</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>SHA512 hash after it was processed</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="size" class="tsd-anchor"></a>
@@ -361,9 +502,14 @@
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L27">struct/image.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L92">struct/image.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>number of bytes the image contains</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="sourceurl" class="tsd-anchor"></a>
@@ -371,9 +517,14 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L28">struct/image.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L95">struct/image.ts:95</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>source URL of the image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="spoilered" class="tsd-anchor"></a>
@@ -381,9 +532,14 @@
 					<div class="tsd-signature tsd-kind-icon">spoilered<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L29">struct/image.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L98">struct/image.ts:98</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>whether or not the image is hit by the current filter</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="tagcount" class="tsd-anchor"></a>
@@ -391,19 +547,29 @@
 					<div class="tsd-signature tsd-kind-icon">tag<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L30">struct/image.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L101">struct/image.ts:101</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>number of tags on the image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="tagids" class="tsd-anchor"></a>
 					<h3>tag<wbr>Ids</h3>
-					<div class="tsd-signature tsd-kind-icon">tag<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">tag<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L31">struct/image.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L104">struct/image.ts:104</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>list of tag IDs on the image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="tags" class="tsd-anchor"></a>
@@ -411,9 +577,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L32">struct/image.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L107">struct/image.ts:107</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>list of tag names on the image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="thumbnailsgenerated" class="tsd-anchor"></a>
@@ -421,9 +592,15 @@
 					<div class="tsd-signature tsd-kind-icon">thumbnails<wbr>Generated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L33">struct/image.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L113">struct/image.ts:113</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>whether the image has finished thumbnail generation.
+							if false, don&#39;t try to load images from <a href="image.html#viewurl">viewUrl</a> or <a href="image.html#representations">representations</a>!</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="updatedat" class="tsd-anchor"></a>
@@ -431,9 +608,14 @@
 					<div class="tsd-signature tsd-kind-icon">updated<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L34">struct/image.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L116">struct/image.ts:116</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>time in UTC for when the image was last updated (RFC3339 datetime)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="uploader" class="tsd-anchor"></a>
@@ -441,9 +623,14 @@
 					<div class="tsd-signature tsd-kind-icon">uploader<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L35">struct/image.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L119">struct/image.ts:119</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the uploader for this image</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="uploaderid" class="tsd-anchor"></a>
@@ -451,9 +638,14 @@
 					<div class="tsd-signature tsd-kind-icon">uploader<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L36">struct/image.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L122">struct/image.ts:122</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ID of the uploader for this image, null if uploaded anonymously</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="upvotes" class="tsd-anchor"></a>
@@ -461,9 +653,14 @@
 					<div class="tsd-signature tsd-kind-icon">upvotes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L37">struct/image.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L125">struct/image.ts:125</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>number of upvotes this image has</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="viewurl" class="tsd-anchor"></a>
@@ -471,9 +668,14 @@
 					<div class="tsd-signature tsd-kind-icon">view<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L38">struct/image.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L128">struct/image.ts:128</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the image&#39;s view URL, including tags</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="width" class="tsd-anchor"></a>
@@ -481,9 +683,14 @@
 					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L39">struct/image.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L131">struct/image.ts:131</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the image&#39;s width (in pixels)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="wilsonscore" class="tsd-anchor"></a>
@@ -491,9 +698,40 @@
 					<div class="tsd-signature tsd-kind-icon">wilson<wbr>Score<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/struct/image.ts#L40">struct/image.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L137">struct/image.ts:137</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>lower bound of the <a href="https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval">Wilson score interval</a>
+							for the image, based on it&#39;s upvotes and downvotes, given a z-score corresponding to a confidence of 99.5%</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="favorites" class="tsd-anchor"></a>
+					<h3>favorites</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> favorites<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/struct/image.ts#L44">struct/image.ts:44</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>number of favorites this image has</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -540,7 +778,7 @@
 								<a href="image.html#duration" class="tsd-kind-icon">duration</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-								<a href="image.html#faves" class="tsd-kind-icon">faves</a>
+								<a href="image.html#favourites" class="tsd-kind-icon">favourites</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="image.html#firstseenat" class="tsd-kind-icon">first<wbr>Seen<wbr>At</a>
@@ -623,17 +861,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="image.html#wilsonscore" class="tsd-kind-icon">wilson<wbr>Score</a>
 							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="image.html#favorites" class="tsd-kind-icon">favorites</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-variable tsd-is-external">
-						<a href="../globals.html#useragent" class="tsd-kind-icon">useragent</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-external">
 						<a href="../globals.html#version" class="tsd-kind-icon">version</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-is-external">
 						<a href="../globals.html#getfeatured" class="tsd-kind-icon">getfeatured</a>
 					</li>
 				</ul>

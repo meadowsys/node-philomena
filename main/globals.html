@@ -76,14 +76,13 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-is-external"><a href="globals.html#useragent" class="tsd-kind-icon">useragent</a></li>
 								<li class="tsd-kind-variable tsd-is-external"><a href="globals.html#version" class="tsd-kind-icon">version</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function"><a href="globals.html#getfeatured" class="tsd-kind-icon">getfeatured</a></li>
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#getfeatured" class="tsd-kind-icon">getfeatured</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,27 +91,12 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-external">
-					<a name="useragent" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> useragent</h3>
-					<div class="tsd-signature tsd-kind-icon">useragent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;node-philomena version &quot; + version</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/consts.ts#L9">consts.ts:9</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>user agent header used when making requests</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-external">
 					<a name="version" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> version</h3>
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = (require(&quot;../package.json&quot;).version ?? &quot;unknown&quot;) as string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/consts.ts#L7">consts.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/consts.ts#L7">consts.ts:7</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -122,21 +106,27 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 					<a name="getfeatured" class="tsd-anchor"></a>
 					<h3>getfeatured</h3>
-					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">getfeatured<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/image.html" class="tsd-signature-type">Image</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">getfeatured<span class="tsd-signature-symbol">(</span>baseDomain<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/image.html" class="tsd-signature-type">Image</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/7486999/src/index.ts#L6">index.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/fd1fb7e/src/fn/index.ts#L6">fn/index.ts:6</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> baseDomain: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;derpibooru.org&quot;</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/image.html" class="tsd-signature-type">Image</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -157,12 +147,9 @@
 						<a href="classes/image.html" class="tsd-kind-icon">Image</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-external">
-						<a href="globals.html#useragent" class="tsd-kind-icon">useragent</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-external">
 						<a href="globals.html#version" class="tsd-kind-icon">version</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#getfeatured" class="tsd-kind-icon">getfeatured</a>
 					</li>
 				</ul>
