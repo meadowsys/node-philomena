@@ -12,9 +12,11 @@ const { readFileSync: readfile } = require("fs");
 const { resolve: resolvepath } = require("path");
 const { parse: json5parse } = require("json5");
 const { CliApplication: typedoccliapp } = require("typedoc");
+
 const app = new typedoccliapp();
 const input = ["./src/index.ts"];
-const out = `docs/${process.env.FOLDERNAME}`;
+const outdir = "docs";
+const out = `${outdir}/${process.env.FOLDERNAME}`;
 const tsconfig = json5parse(readfile(resolvepath(__dirname, "tsconfig.json")));
 const isreleasebuild = process.env.CI ? process.env.GITHUB_REF.includes("/tag") : false;
 
@@ -37,3 +39,11 @@ delete opts.sourceMap;
 delete opts.declaration;
 
 app.bootstrap(opts);
+
+if (isreleasebuild) {
+   const fse = require("fs-extra");
+   // also put it in folder "latest"
+   fse.copySync(`${outdir}/${process.env.FOLDERNAME}`, `${outdir}/latest`, {
+      errorOnExist: true
+   });
+}
