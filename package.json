@@ -2,6 +2,10 @@
    "name": "philomena",
    "version": "0.1.0",
    "description": "A (currently WIP) node.js wrapper for philomena-based imageboards (like derpibooru).",
+   "keywords": [
+      "derpibooru",
+      "philomena"
+   ],
    "main": "build/index.js",
    "types": "build/index.d.ts",
    "files": [

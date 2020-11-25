@@ -38,7 +38,8 @@ yarn add philomena
 
 ## Docs
 
-Documentation for the latest release is available at [https://pcelestia.github.io/node-philomena/latest/](https://pcelestia.github.io/node-philomena/latest/). Documentation for the main branch is available at [https://pcelestia.github.io/node-philomena/main/](https://pcelestia.github.io/node-philomena/main/).
+- latest release: [https://pcelestia.github.io/node-philomena/latest/](https://pcelestia.github.io/node-philomena/latest/).
+- main branch: [https://pcelestia.github.io/node-philomena/main/](https://pcelestia.github.io/node-philomena/main/).
 
 ## Changelog
 
