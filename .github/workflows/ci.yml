@@ -37,7 +37,7 @@ jobs:
 
     - name: test
       run: |
-        pnpm test
+        pnpm run test:ci
         bash <(curl -s https://codecov.io/bash) -f testresults.json
 
     # i think its more efficient to lint 3 times than to setup a new

@@ -256,7 +256,7 @@ module.exports = {
       "@typescript-eslint/no-shadow": warn,
       "@typescript-eslint/no-this-alias": error,
       "@typescript-eslint/no-throw-literal": error,
-      "@typescript-eslint/no-type-alias": [error, {
+      "@typescript-eslint/no-type-alias": [off, {
          allowAliases: "in-unions-and-intersections"
       }],
       "@typescript-eslint/no-unnecessary-boolean-literal-compare": error,
