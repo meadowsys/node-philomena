@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "*"
-    tags-ignore:
+    tags:
       - "*"
 name: ci
 
@@ -11,6 +11,7 @@ jobs:
   build:
     name: build/test/lint
     runs-on: ubuntu-20.04
+    if: "!contains(github.event.push.ref, 'tag')"
     strategy:
       matrix:
         node-version: ["10", "12", "14", "15"]
@@ -44,3 +45,37 @@ jobs:
     # environment just to lint
     - name: lint
       run: pnpm run lint
+
+  docs:
+    name: docs
+    runs-on: ubuntu-20.04
+    steps:
+    - name: get ref name
+      run: echo FOLDERNAME=${GITHUB_REF#refs/*/} >> $GITHUB_ENV
+
+    - name: checkout code
+      uses: actions/checkout@v2
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "15"
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v1.2.1
+      with:
+        version: 5.13.1
+
+    - name: install dependencies
+      run: pnpm i
+
+    - name: render docs
+      run: npm run docs
+
+    - name: deploy docs
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: docs
+        CLEAN: false

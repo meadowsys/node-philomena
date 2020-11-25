@@ -1,5 +1,47 @@
-# node-philomena
+# philomena <!-- omit in toc -->
 
 A (currently WIP) node.js wrapper for philomena-based imageboards (like derpibooru).
 
-NOTE this doesn't do anything yet, I'm just getting started lol.
+**NOTE: Still WIP, expect breaking changes when updating between minor versions. Use a tilde version specifier (~) in `package.json` to only accept patch updates, which should not break.**
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Docs](#docs)
+- [Changelog](#changelog)
+
+## Requirements
+
+- node (tested on current and all LTS)
+- package manager ([pnpm](https://pnpm.js.org/) is what I recommend)
+
+## Installation
+
+pnpm
+
+```sh
+pnpm i node-philomena
+```
+
+npm
+
+```sh
+npm i node-philomena
+```
+
+yarn
+
+```sh
+yarn add node-philomena
+```
+
+## Docs
+
+Documentation for the latest release is available at [https://pcelestia.github.io/node-philomena/latest/](https://pcelestia.github.io/node-philomena/latest/). Documentation for the main branch is available at [https://pcelestia.github.io/node-philomena/main/](https://pcelestia.github.io/node-philomena/main/).
+
+## Changelog
+
+### v0.1.0 <!-- omit in toc -->
+
+- initial setup
+- getfeatured: gets a featured image
+- this was a setup release, nothing much noteworthy
