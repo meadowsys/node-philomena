@@ -4,6 +4,8 @@ A (currently WIP) node.js wrapper for philomena-based imageboards (like derpiboo
 
 **NOTE: Still WIP, expect breaking changes when updating between minor versions. Use a tilde version specifier (~) in `package.json` to only accept patch updates, which should not break.**
 
+## Table of contents <!-- omit in toc -->
+
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Docs](#docs)
@@ -19,19 +21,19 @@ A (currently WIP) node.js wrapper for philomena-based imageboards (like derpiboo
 pnpm
 
 ```sh
-pnpm i node-philomena
+pnpm i philomena
 ```
 
 npm
 
 ```sh
-npm i node-philomena
+npm i philomena
 ```
 
 yarn
 
 ```sh
-yarn add node-philomena
+yarn add philomena
 ```
 
 ## Docs
