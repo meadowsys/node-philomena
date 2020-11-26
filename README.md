@@ -43,6 +43,10 @@ yarn add philomena
 
 ## Changelog
 
+### v0.1.1 <!-- omit in toc -->
+
+- docs update (darnit npm) <!-- didnt mean to stick usage in -->
+
 ### v0.1.0 <!-- omit in toc -->
 
 - initial setup
