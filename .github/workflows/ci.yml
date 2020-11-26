@@ -11,7 +11,7 @@ jobs:
   build:
     name: build/test/lint
     runs-on: ubuntu-20.04
-    if: "!contains(github.event.push.ref, 'tag')"
+    if: contains(github.event.push.ref, 'heads')
     strategy:
       matrix:
         node-version: ["10", "12", "14", "15"]
