@@ -101,7 +101,7 @@ import { JsonObject, JsonProperty, Any } from "json2typescript";
    @JsonProperty("tag_count", Number) public tagCount: number = -1;
 
    /** list of tag IDs on the image */
-   @JsonProperty("tag_ids", [String]) public tagIds: Array<string> = []; // TODO: this too
+   @JsonProperty("tag_ids", [Number]) public tagIds: Array<number> = []; // TODO: this too
 
    /** list of tag names on the image */
    @JsonProperty("tags", [String]) public tags: Array<string> = [];
@@ -116,7 +116,7 @@ import { JsonObject, JsonProperty, Any } from "json2typescript";
    @JsonProperty("updated_at", String) public updatedAt: string = "";
 
    /** the uploader for this image */
-   @JsonProperty("uploader", String) public uploader: string = "";
+   @JsonProperty("uploader", String, true) public uploader: string | null = null;
 
    /** ID of the uploader for this image, null if uploaded anonymously */
    @JsonProperty("uploader_id", Number, true) public uploaderId: number | null = null;

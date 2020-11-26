@@ -1,10 +1,7 @@
-/**
- * Parameters for when making requests
- * @see https://derpibooru.org/pages/api for more info on these params
- * @packageDocumentation
- */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-
+/** @see https://derpibooru.org/pages/api for more info on these params */
 export interface FilterID {
    /**
     * Assuming the user can access the filter ID given by the parameter,
@@ -12,9 +9,10 @@ export interface FilterID {
     * unauthenticated API access.
     * @see https://derpibooru.org/pages/api for more info on these params
     */
-   filter_id: string;
+   filterId: string;
 }
 
+/** @see https://derpibooru.org/pages/api for more info on these params */
 export interface Key {
    /**
     * Optional authentication token If ommitted, no user is authenticated.
@@ -26,17 +24,46 @@ export interface Key {
    key: string;
 }
 
+/** @see https://derpibooru.org/pages/api for more info on these params */
 export interface Page {
    /** if the response is paginated, controls the page number. Enpty value is first page */
    page: number;
 }
 
+/** @see https://derpibooru.org/pages/api for more info on these params */
 export interface PerPage {
-   /** controls number of results per page */
-   per_page: number;
+   /** controls number of results per page
+    * @see https://derpibooru.org/pages/api for more info on these params
+    */
+   perPage: number;
 }
 
+/** @see https://derpibooru.org/pages/api for more info on these params */
 export interface SearchQuery {
-   /** search query, if request is a search request. */
-   q: string;
+   /** search query, if request is a search request.
+    * @see https://derpibooru.org/pages/api for more info on these params
+    */
+   query: string;
+}
+
+/**
+ * type that accepts all queries or no query
+ * @internal
+ */
+export type AllQueries = Partial<FilterID & Key & Page & PerPage & SearchQuery>;
+
+/**
+ * converts an object from a library-specific query format into an object
+ * with queries that derpibooru understands
+ */
+export function converttoquery(queries: AllQueries): any {
+   const rv: any = {};
+
+   if (queries.filterId) rv.filter_id = queries.filterId;
+   if (queries.key) rv.key = queries.key;
+   if (queries.page) rv.page = queries.page;
+   if (queries.perPage) rv.per_page = queries.perPage;
+   if (queries.query) rv.q = queries.query;
+
+   return rv;
 }

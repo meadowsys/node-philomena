@@ -13,3 +13,29 @@ export const version: string = (require("../package.json").version ?? "unknown")
 export const useragent = {
    "User-Agent": "node-philomena version " + version
 };
+
+/**
+ * an enum containing known base domains of Philomena-based imageboards.
+ *
+ * If a site you want to use this library with doesn't have its domain
+ * listed here, but you can confirm it is still Philomena based, you can still
+ * use it! You just have to manually specify it.
+ */
+export enum Domains {
+   /** domain for Derpibooru */
+   DERPIBOORU = "derpibooru.org",
+
+   /**
+    * domain for Trixiebooru
+    *
+    * NOTE: Trixiebooru just links to Derpibooru, and Derpibooru recommends you
+    * use the derpibooru address
+    */
+   TRIXIEBOORU = "trixiebooru.org",
+
+   /** domain for Furbooru */
+   FURBOORU = "furbooru.org",
+
+   /** domain for Ponybooru */
+   PONYBOORU = "ponybooru.org"
+}

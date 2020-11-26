@@ -266,9 +266,9 @@ module.exports = {
       "@typescript-eslint/no-unnecessary-qualifier": error,
       "@typescript-eslint/no-unnecessary-type-arguments": off,
       "@typescript-eslint/no-unnecessary-type-assertion": error,
-      "@typescript-eslint/no-unsafe-assignment": error,
+      "@typescript-eslint/no-unsafe-assignment": off,
       "@typescript-eslint/no-unsafe-call": error,
-      "@typescript-eslint/no-unsafe-member-access": error,
+      "@typescript-eslint/no-unsafe-member-access": off,
       "@typescript-eslint/no-unsafe-return": error,
       "@typescript-eslint/no-unused-expressions": error,
       "@typescript-eslint/no-unused-vars-experimental": [warn, {

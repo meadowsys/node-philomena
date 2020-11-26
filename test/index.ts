@@ -10,9 +10,9 @@ use(chaipromisy);
 
 describe("functions", () => {
    it("should get something from derpibooru", () => {
-      expect(getfeatured()).to.eventually.be.fulfilled.and.fulfilled.with.arguments;
+      return expect(getfeatured()).to.eventually.be.fulfilled;
    });
    it("should get something from furbooru", () => {
-      expect(getfeatured("furbooru.org")).to.eventually.be.fulfilled.and.fulfilled.with.arguments;
+      return expect(getfeatured("furbooru.org")).to.eventually.be.fulfilled;
    });
 });
