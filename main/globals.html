@@ -68,9 +68,25 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-is-external"><a href="enums/domains.html" class="tsd-kind-icon">Domains</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/image.html" class="tsd-kind-icon">Image</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/filterid.html" class="tsd-kind-icon">FilterID</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/key.html" class="tsd-kind-icon">Key</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/page.html" class="tsd-kind-icon">Page</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/perpage.html" class="tsd-kind-icon">Per<wbr>Page</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/searchquery.html" class="tsd-kind-icon">Search<wbr>Query</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
@@ -82,6 +98,7 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#converttoquery" class="tsd-kind-icon">converttoquery</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#getfeatured" class="tsd-kind-icon">getfeatured</a></li>
 							</ul>
 						</section>
@@ -96,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = (require(&quot;../package.json&quot;).version ?? &quot;unknown&quot;) as string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/52fd35d/src/consts.ts#L7">consts.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/9fc69d8/src/consts.ts#L7">consts.ts:7</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -109,22 +126,51 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
-					<a name="getfeatured" class="tsd-anchor"></a>
-					<h3>getfeatured</h3>
+					<a name="converttoquery" class="tsd-anchor"></a>
+					<h3>converttoquery</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">getfeatured<span class="tsd-signature-symbol">(</span>baseDomain<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/image.html" class="tsd-signature-type">Image</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">converttoquery<span class="tsd-signature-symbol">(</span>queries<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AllQueries</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/52fd35d/src/fn/index.ts#L6">fn/index.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/9fc69d8/src/struct/params.ts#L59">struct/params.ts:59</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>converts an object from a library-specific query format into an object
+									with queries that derpibooru understands</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>queries: <span class="tsd-signature-type">AllQueries</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+					<a name="getfeatured" class="tsd-anchor"></a>
+					<h3>getfeatured</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">getfeatured<span class="tsd-signature-symbol">(</span>baseDomain<span class="tsd-signature-symbol">?: </span><a href="enums/domains.html" class="tsd-signature-type">Domains</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/image.html" class="tsd-signature-type">Image</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/PCelestia/node-philomena/blob/9fc69d8/src/fn/featured.ts#L5">fn/featured.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> baseDomain: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;derpibooru.org&quot;</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> baseDomain: <a href="enums/domains.html" class="tsd-signature-type">Domains</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;derpibooru.org&quot;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/image.html" class="tsd-signature-type">Image</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -143,11 +189,32 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-is-external">
+						<a href="enums/domains.html" class="tsd-kind-icon">Domains</a>
+					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/image.html" class="tsd-kind-icon">Image</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/filterid.html" class="tsd-kind-icon">FilterID</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/key.html" class="tsd-kind-icon">Key</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/page.html" class="tsd-kind-icon">Page</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/perpage.html" class="tsd-kind-icon">Per<wbr>Page</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/searchquery.html" class="tsd-kind-icon">Search<wbr>Query</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-is-external">
 						<a href="globals.html#version" class="tsd-kind-icon">version</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#converttoquery" class="tsd-kind-icon">converttoquery</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#getfeatured" class="tsd-kind-icon">getfeatured</a>
