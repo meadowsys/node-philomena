@@ -39,7 +39,7 @@ jobs:
     - name: test
       run: |
         pnpm run test:ci
-        bash <(curl -s https://codecov.io/bash) -f testresults.json
+        bash <(curl -s https://codecov.io/bash) -f testresults.json -n ${{ matrix.node-version }}
 
     # i think its more efficient to lint 3 times than to setup a new
     # environment just to lint
