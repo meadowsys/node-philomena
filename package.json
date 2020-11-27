@@ -8,10 +8,7 @@
    ],
    "main": "build/index.js",
    "types": "build/index.d.ts",
-   "files": [
-      "src",
-      "build"
-   ],
+   "files": ["build"],
    "scripts": {
       "test": "mocha -r ts-node/register test/**/*.ts",
       "test:ci": "mocha -R json -r ts-node/register test/**/*.ts >> testresults.json",
