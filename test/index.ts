@@ -4,15 +4,22 @@
 import { describe, it } from "mocha";
 import { expect, use } from "chai";
 import chaipromisy from "chai-as-promised";
-import { getfeatured } from "../src/index";
+// import { getfeatured } from "../src/index";
+import { createClient } from "../src/index";
 
 use(chaipromisy);
 
-describe("functions", () => {
-   it("should get something from derpibooru", () => {
-      return expect(getfeatured()).to.eventually.be.fulfilled;
-   });
-   it("should get something from furbooru", () => {
-      return expect(getfeatured("furbooru.org")).to.eventually.be.fulfilled;
+// describe("functions", () => {
+//    it("should get something from derpibooru", () => {
+//       return expect(getfeatured()).to.eventually.be.fulfilled;
+//    });
+//    it("should get something from furbooru", () => {
+//       return expect(getfeatured("furbooru.org")).to.eventually.be.fulfilled;
+//    });
+// });
+
+describe("test", function() {
+   it("should be h", function() {
+      return expect(createClient()).to.equal("h");
    });
 });

@@ -30,6 +30,8 @@ module.exports = {
       "@typescript-eslint/no-unused-expressions": "off",
       "@typescript-eslint/init-declarations": "off",
       "@typescript-eslint/naming-convention": "off",
+      "@typescript-eslint/no-magic-numbers": "off",
+      "@typescript-eslint/no-redeclare": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/no-unsafe-return": "off",
