@@ -26,26 +26,21 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v1.2.1
-      with:
-        version: 5.13.1
-
     - name: install dependencies
-      run: pnpm i
+      run: npm i
 
     - name: build
-      run: pnpm run build
+      run: npm run build
 
     - name: test
       run: |
-        pnpm run test:ci
+        npm run test:ci
         bash <(curl -s https://codecov.io/bash) -f testresults.json -n ${{ matrix.node-version }}
 
     # i think its more efficient to lint 3 times than to setup a new
     # environment just to lint
     - name: lint
-      run: pnpm run lint
+      run: npm run lint
 
   docs:
     name: docs
@@ -62,13 +57,8 @@ jobs:
       with:
         node-version: "15"
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v1.2.1
-      with:
-        version: 5.13.1
-
     - name: install dependencies
-      run: pnpm i
+      run: npm i
 
     - name: render docs
       run: npm run docs

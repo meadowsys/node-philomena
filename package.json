@@ -21,8 +21,8 @@
       "build:mjs": "tsc --project tsconfig.mjs.json",
       "build:types": "tsc --project tsconfig.types.json",
       "lint": "eslint --ext .ts src/",
-      "test": "mocha -r ts-node/register test/**/*.ts",
-      "test:ci": "mocha -R json -r ts-node/register test/**/*.ts >> testresults.json",
+      "test": "nyc --use-spawn-wrap mocha -r source-map-support/register -r ts-node/register test/**/*.ts",
+      "test:ci": "npm run test",
       "docs": "node renderdocs",
       "prepublishOnly": "npm run lint && npm run build && npm test"
    },
@@ -60,7 +60,9 @@
       "json5": "^2.1.3",
       "merge-stream": "^2.0.0",
       "mocha": "^8.2.1",
+      "nyc": "^15.1.0",
       "rimraf": "^3.0.2",
+      "source-map-support": "^0.5.19",
       "ts-node": "^9.1.1",
       "typedoc": "^0.20.14",
       "typescript": "^4.1.3"
