@@ -7,3 +7,4 @@ docs
 testresults.json
 GIT-IGNORE-*
 .nyc_output
+coverage
