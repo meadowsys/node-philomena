@@ -1,4 +1,6 @@
-build
+cjs
+mjs
+types
 docs
 .eslintrc.js
 gulpfile.ts

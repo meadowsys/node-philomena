@@ -1,5 +1,7 @@
 node_modules
-build
+cjs
+mjs
+types
 docs
 .vscode
 testresults.json
