@@ -15,6 +15,7 @@ export function createClient(opts: ClientOpts): PhilomenaClient {
    // });
 
    const jsongetter = bent(`https://${opts.domain}/api/v1/json`, "json", "GET");
+
    return {
       get domain() {
          return opts.domain;

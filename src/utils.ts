@@ -16,7 +16,9 @@ export const version: string = (require("../package.json").version ?? "unknown")
  * user agent header used when making requests
  * @internal
  */
-export const useragent = "node-philomena version " + version;
+export const useragent = {
+   "User-Agent": "node-philomena version " + version
+};
 
 /**
  * an enum containing known base domains of Philomena-based imageboards.
