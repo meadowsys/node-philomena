@@ -20,7 +20,7 @@
       "build:types": "tsc --project tsconfig.types.json",
       "build:cjs": "tsc --project tsconfig.cjs.json",
       "build:mjs": "tsc --project tsconfig.mjs.json",
-      "build:ci": "npm run build:types",
+      "build:ci": "npm run build:types && npm run build:cjs",
       "lint": "eslint --ext .ts src/",
       "lint:ci": "npm run lint",
       "test": "nyc mocha -r source-map-support/register -r ts-node/register test/**/*.ts",
