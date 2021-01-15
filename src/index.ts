@@ -1,21 +1,9 @@
 // import Cache from "node-cache";
-import { PhilomenaClient } from "./types";
+import { ClientOpts, PhilomenaClient } from "./utils";
+import { getFeatured } from "./functions";
+import bent from "bent";
 
-export * from "./types";
-// how the heck do i format this to make it look good?
-/** options for when creating a client */
-export type ClientOpts = {
-   /** token to use (not yet used) */
-   token?: string;
-   /** domain to use */
-   domain: string;
-}
-& ({
-   cache?: true;
-   ttl?: number;
-} | {
-   cache?: false;
-});
+export * from "./utils";
 
 export function createClient(opts: ClientOpts): PhilomenaClient {
    // if (!opts.cache) return {
@@ -26,9 +14,11 @@ export function createClient(opts: ClientOpts): PhilomenaClient {
    //    stdTTL: opts.ttl ?? (5 * 60)
    // });
 
+   const jsongetter = bent(`https://${opts.domain}/api/v1/json`, "json", "GET");
    return {
       get domain() {
          return opts.domain;
-      }
+      },
+      getFeatured: getFeatured(jsongetter)
    };
 }

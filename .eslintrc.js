@@ -38,6 +38,11 @@ module.exports = {
       "@typescript-eslint/promise-function-async": "off",
       "@typescript-eslint/require-array-sort-compare": "off",
       "@typescript-eslint/restrict-plus-operands": "off",
+      "@typescript-eslint/space-before-function-paren": ["error", {
+         "anonymous": "never",
+         "named": "never",
+         "asyncArrow": "always"
+      }],
       "functional/no-class": "error",
       "functional/prefer-type-literal": "error"
    }
