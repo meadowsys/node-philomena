@@ -3,6 +3,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-require-imports */
 
+export type PhilomenaClient = {
+   readonly domain: string;
+};
+
 /** version of this package being used */
 export const version: string = (require("../package.json").version ?? "unknown") as string;
 
@@ -28,7 +32,7 @@ export enum Domains {
    /**
     * domain for Trixiebooru
     *
-    * NOTE: Trixiebooru just links to Derpibooru, and Derpibooru recommends you
+    * NOTE: Trixiebooru is just Derpibooru, and Derpibooru recommends you
     * use the derpibooru address
     */
    TRIXIEBOORU = "trixiebooru.org",

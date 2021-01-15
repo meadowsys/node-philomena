@@ -5,7 +5,8 @@ import { describe, it } from "mocha";
 import { expect, use } from "chai";
 import chaipromisy from "chai-as-promised";
 // import { getfeatured } from "../src/index";
-import { createClient } from "../src/index";
+import { createClient } from "..";
+import { Domains, version } from "..";
 
 use(chaipromisy);
 
@@ -18,8 +19,14 @@ use(chaipromisy);
 //    });
 // });
 
-describe("test", function() {
-   it("should be h", function() {
-      return expect(createClient()).to.equal("h");
+describe("miscellaneous", function() {
+   return expect(version).to.not.equal("unknown");
+});
+
+describe("client", function() {
+   it("should use the right domain", function() {
+      return expect(createClient({
+         domain: Domains.DERPIBOORU
+      })).to.have.property("domain").that.equals(Domains.DERPIBOORU);
    });
 });
