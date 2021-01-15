@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - "*"
-    tags:
-      - "*"
+  pull_request:
+
 name: ci
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
       run: npm i
 
     - name: build
-      run: npm run build
+      run: npm run build:ci
 
     - name: test
       run: |
@@ -38,33 +38,4 @@ jobs:
     # i think its more efficient to lint 3 times than to setup a new
     # environment just to lint
     - name: lint
-      run: npm run lint
-
-  docs:
-    name: docs
-    runs-on: ubuntu-20.04
-    steps:
-    - name: get ref name
-      run: echo FOLDERNAME=${GITHUB_REF#refs/*/} >> $GITHUB_ENV
-
-    - name: checkout code
-      uses: actions/checkout@v2
-
-    - name: setup node
-      uses: actions/setup-node@v1
-      with:
-        node-version: "15"
-
-    - name: install dependencies
-      run: npm i
-
-    - name: render docs
-      run: npm run docs
-
-    - name: deploy docs
-      uses: JamesIves/github-pages-deploy-action@3.7.1
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: docs
-        CLEAN: false
+      run: npm run lint:ci

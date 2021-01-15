@@ -15,12 +15,14 @@
       "types"
    ],
    "scripts": {
-      "clean": "rimraf cjs mjs types",
-      "build": "npm run clean && npm run build:cjs && npm run build:mjs && npm run build:types",
+      "clean": "rimraf cjs mjs types coverage .nyc_output docs",
+      "build": "npm run clean && npm run build:types && npm run build:cjs && npm run build:mjs",
+      "build:types": "tsc --project tsconfig.types.json",
       "build:cjs": "tsc --project tsconfig.cjs.json",
       "build:mjs": "tsc --project tsconfig.mjs.json",
-      "build:types": "tsc --project tsconfig.types.json",
+      "build:ci": "npm run build:types",
       "lint": "eslint --ext .ts src/",
+      "lint:ci": "npm run lint",
       "test": "nyc mocha -r source-map-support/register -r ts-node/register test/**/*.ts",
       "test:ci": "npm run test && nyc report --reporter=json",
       "docs": "node renderdocs",
