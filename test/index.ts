@@ -19,14 +19,22 @@ use(chaipromisy);
 //    });
 // });
 
-describe("miscellaneous", function() {
-   return expect(version).to.not.equal("unknown");
+describe("other package-level stuff", function() {
+
+   it("should get its version", function() {
+      return expect(version).to.not.equal("unknown");
+   });
+
 });
 
 describe("client", function() {
+
    it("should use the right domain", function() {
       return expect(createClient({
          domain: Domains.DERPIBOORU
       })).to.have.property("domain").that.equals(Domains.DERPIBOORU);
    });
+
+   it("should fetch the featured image correctly");
+
 });
