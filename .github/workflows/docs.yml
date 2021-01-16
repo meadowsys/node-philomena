@@ -5,11 +5,11 @@ on:
       - "*"
     tags:
       - "*"
-name: ci
+name: docs
 
 jobs:
-  docs:
-    name: docs
+  deploy:
+    name: deploy
     runs-on: ubuntu-20.04
     steps:
     - name: get ref name
