@@ -24,7 +24,7 @@ jobs:
         node-version: "15"
 
     - name: install dependencies
-      run: npm i
+      run: npm ci
 
     - name: type check
       run: npx tsc --noEmit
