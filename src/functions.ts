@@ -1,10 +1,15 @@
 import { PhilomenaClient, useragent } from "./utils";
 import bent from "bent";
+import { Image, imageValidator } from "./validators";
 
 export const getFeatured = (get: bent.RequestFunction<any>) => {
-   return async function(this: PhilomenaClient): Promise<any> {
-      return await get("/images/featured", undefined, {
+   return async function(this: PhilomenaClient): Promise<Image> {
+      const res = await get("/images/featured", undefined, {
          ...useragent
       });
+
+      const validationres = imageValidator.safeParse(res);
+      if (validationres.success) return validationres.data;
+      throw validationres.error;
    };
 };
