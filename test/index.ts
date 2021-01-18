@@ -28,13 +28,17 @@ describe("other package-level stuff", function() {
 });
 
 describe("client", function() {
+   const client = createClient({ domain: Domains.DERPIBOORU });
 
    it("should use the right domain", function() {
-      return expect(createClient({
-         domain: Domains.DERPIBOORU
-      })).to.have.property("domain").that.equals(Domains.DERPIBOORU);
+      return expect(client).to.have.property("domain").that.equals(Domains.DERPIBOORU);
    });
 
-   it("should fetch the featured image correctly");
-
+   it("should fetch the featured image correctly", function() {
+      return expect(client.getFeatured())
+         .to.eventually.be.fulfilled
+         .and.have.property("image")
+         .that.has.property("upvotes")
+         .that.is.greaterThan(0);
+   });
 });

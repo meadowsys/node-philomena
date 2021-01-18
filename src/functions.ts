@@ -1,9 +1,9 @@
 import { PhilomenaClient, useragent } from "./utils";
 import bent from "bent";
-import { Image, imageValidator } from "./validators";
+import { ImageRaw, imageValidator } from "./validators";
 
 export const getFeatured = (get: bent.RequestFunction<any>) => {
-   return async function(this: PhilomenaClient): Promise<Image> {
+   return async function(this: PhilomenaClient): Promise<ImageRaw> {
       const res = await get("/images/featured", undefined, {
          ...useragent
       });

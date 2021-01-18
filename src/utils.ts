@@ -2,7 +2,7 @@
 // and i put the types and the enums and things here too, because it kind
 // of makes sense here
 
-import { Image } from "./validators";
+import { ImageRaw } from "./validators";
 
 // about fourteen million rules against that require for the version lol
 /* eslint-disable @typescript-eslint/no-var-requires */
@@ -65,5 +65,5 @@ export type ClientOpts = {
 
 export type PhilomenaClient = {
    readonly domain: string;
-   getFeatured(): Promise<Image>;
+   getFeatured(): Promise<ImageRaw>;
 };

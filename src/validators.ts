@@ -2,11 +2,13 @@
 import z, { object, number } from "zod";
 
 export const imageValidator = object({
-   id: number(),
-   score: number().int(),
-   upvotes: number().min(0).int(),
-   downvotes: number().min(0).int(),
-   favorites: number().min(0).int()
+   image: object({
+      id: number(),
+      score: number().int(),
+      upvotes: number().min(0).int(),
+      downvotes: number().min(0).int(),
+      faves: number().min(0).int()
+   })
 });
 
-export type Image = z.infer<typeof imageValidator>;
+export type ImageRaw = z.infer<typeof imageValidator>;
