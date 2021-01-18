@@ -30,7 +30,9 @@ export const useragent = {
  * use it! You just have to manually specify it.
  */
 export enum Domains {
-   /** domain for Derpibooru */
+   /**
+    * domain for Derpibooru
+    */
    DERPIBOORU = "derpibooru.org",
 
    /**
@@ -41,29 +43,51 @@ export enum Domains {
     */
    TRIXIEBOORU = "trixiebooru.org",
 
-   /** domain for Furbooru */
+   /**
+    * domain for Furbooru
+    */
    FURBOORU = "furbooru.org",
 
-   /** domain for Ponybooru */
+   /**
+    * domain for Ponybooru
+    */
    PONYBOORU = "ponybooru.org"
 }
 
-// how the heck do i format this to make it look good lol?
-/** options for when creating a client */
+/**
+ * options for when creating a client
+ */
 export type ClientOpts = {
-   /** token to use (not yet used) */
+   /**
+    * token to use (not yet used)
+    */
    token?: string;
-   /** domain to use */
-   domain: string;
-}
-& ({
-   cache?: true;
-   ttl?: number;
-} | {
-   cache?: false;
-});
 
+   /**
+    * domain to use
+    */
+   domain: string;
+};
+
+// dont know if there will ever be a cache tbh
+// & ({
+//    cache?: true;
+//    ttl?: number;
+// } | {
+//    cache?: false;
+// });
+
+/**
+ * type for the client
+ */
 export type PhilomenaClient = {
+   /**
+    * the domain that this client is configured to use
+    */
    readonly domain: string;
+
+   /**
+    * gets the featured image from the server
+    */
    getFeatured(): Promise<ImageRaw>;
 };
