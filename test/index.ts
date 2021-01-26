@@ -37,8 +37,7 @@ describe("client", function() {
    it("should fetch the featured image correctly", function() {
       return expect(client.getFeatured())
          .to.eventually.be.fulfilled
-         .and.have.property("image")
-         .that.has.property("upvotes")
+         .and.have.property("upvotes")
          .that.is.greaterThan(0);
    });
 });

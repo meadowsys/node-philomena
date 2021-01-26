@@ -12,7 +12,13 @@ export const imageValidator = object({
       downvotes: number().min(0).int(),
       faves: number().min(0).int()
    })
-});
+}).transform(original => ({
+   id: original.image.id,
+   score: original.image.score,
+   upvotes: original.image.upvotes,
+   downvotes: original.image.downvotes,
+   favorites: original.image.faves
+}));
 
 /**
  * type for a raw image response from derpibooru
